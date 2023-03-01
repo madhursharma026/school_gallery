@@ -102,9 +102,11 @@
     window.onscroll = function () {
         if (document.documentElement.scrollTop > 100) {
             document.getElementById("header").style.position = "relative";
+            document.getElementById("header").style.transition = "top 0.4s ease-out";
             document.getElementById("header").style.marginTop = "-76px";
         } else {
             document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.transition = "top 0.4s ease-out";
             document.getElementById("header").style.marginTop = "0";
         }
     }
@@ -113,7 +115,7 @@
 <body>
     <div id="header" style="z-index: 1000;">
         <div class="w-screen">
-            <nav class="flex items-center justify-between flex-wrap bg-navbarBG p-3 lg:flex hidden">
+            <nav class="flex items-center justify-between flex-wrap bg-navbarBG p-3 lg:flex hidden abc">
                 <div class="flex items-center flex-shrink-0 text-white mr-6 ml-4">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuMdkg5uExhqnoTkIS1Tznf93WP0P2crfIJkN32wcmDDNWr6Is9eePJqtjBPinWwfH_c&usqp=CAU"
                         alt="#ImgNotFound" style="height: 40px;">
@@ -133,7 +135,8 @@
                             class="lg:inline-block mr-5 text-xl text-navbarText">Events</a>
                         <a href="https://school-press.vercel.app/press.html"
                             class="lg:inline-block mr-5 text-xl text-navbarText">News</a>
-                        <a href="#Gallery" class="lg:inline-block mr-10 text-xl text-navbarText">Gallery</a>
+                        <a href="https://school-gallery.vercel.app/gallery.html"
+                            class="lg:inline-block mr-10 text-xl text-navbarText">Gallery</a>
                     </div>
                 </div>
             </nav>
@@ -186,7 +189,7 @@
                                     class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">News</a>
                             </li>
                             <li>
-                                <a href="#Gallery"
+                                <a href="https://school-gallery.vercel.app/gallery.html"
                                     class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Gallery</a>
                             </li>
                         </ul>
@@ -300,7 +303,7 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap pb-10">
             <div class="w-1/3 md:w-1/6 p-1">
                 <img src="https://briny.ancorathemes.com/wp-content/uploads/2019/02/gallery-13-copyright.jpg"
                     alt="#ImgNotFound" style="max-height: 300px; height: 100%; width: 100%; cursor: pointer;">
@@ -327,17 +330,85 @@
             </div>
         </div>
     </div>
+
+    <hr>
+    <div class="text-center tracking-widest px-3 py-20">
+        <h1 class="text-xl"><b>JOIN OUR MAILING LIST</b></h1>
+        <p class="text-base py-4"><b>Sign up to receive updates about our programs, events, workshops, and more.</b></p>
+        <div class="grid lg:grid-rows-1 grid-rows-2 sm:grid-flow-col gap-4 justify-center items-center px-3">
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-first-name">
+                    First Name
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-first-name" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-last-name">
+                    Last Name
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-last-name" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-email">
+                    Email
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-email" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-zip-code">
+                    Zip Code
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-zip-code" type="text">
+            </div>
+        </div>
+        <button type="button"
+            class="bg-black sm:hover:bg-green text-white sm:hover:text-black px-4 py-2 mt-5">SUBSCRIBE</button>
+    </div>
+
+    <div class="text-center tracking-widest px-3 py-5">
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 justify-center items-center px-3">
+            <a href="#contact" class="text-base"><b>CONTACT US</b></a>
+            <a href="#more" class="text-base"><b>COME SEE US</b></a>
+            <a href="#press" class="text-base"><b>PRESS</b></a>
+            <a href="#careers" class="text-base"><b>CAREERS</b></a>
+            <b>
+                <a href="#fb" class="text-base"><i class="fa fa-facebook-f px-2"></i></a>
+                <a href="#twitter" class="text-base"><i class="fa fa-twitter px-2"></i></a>
+                <a href="#insta" class="text-base"><i class="fa fa-instagram px-2"></i></a>
+            </b>
+        </div>
+        <p class="text-sm text-gray-500 mt-5">
+            © Copyright 2019 Tailwindcss School NYC. All rights reserved.
+            <a href="#terms" class="underline">Terms of Use</a> and
+            <a href="#policy" class="underline">Privacy Policy</a>.
+            <a href="#credit" class="underline">Site Credits.</a>
+        </p>
+    </div>
 </body>
 <script>
     document.querySelectorAll('.image-container img').forEach(image => {
         image.onclick = () => {
             document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('#header').style.zIndex = '0';
             document.querySelector('.popup-image img').src = image.getAttribute('src')
         }
     })
 
     document.querySelector('.popup-image span').onclick = () => {
         document.querySelector('.popup-image').style.display = 'none';
+        document.querySelector('#header').style.zIndex = '100';
     }
 </script>
 
